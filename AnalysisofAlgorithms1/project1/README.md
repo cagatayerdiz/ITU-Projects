@@ -8,7 +8,7 @@ In a region of city A, public health officials try to reveal if the people of th
 
 BMI is one of the determinative issues for the people who have weight problems. This index is calculated by dividing weight in kilograms to square of the height in meters.
 
-BMI = mass(kg)/((height(m))*(height(m)))
+`BMI=mass(kg)/((height(m))*(height(m)))`
 
 For this work, weight and height data of N people were collected in a dataset (height_ weight.txt).
 
@@ -27,13 +27,13 @@ Both of these two people have the same distance to the threshold, because
 
 In this region, there is only one hospital and its public health clinic is able to give service to M patients at the same time (the rest of the patients will be send to another hospitals). Hence the first M people among N people whose BMI value has more difference are chosen. So you will sort the absolute differences between BMI values of the people and threshold. And you will choose M highest difference valued records.
 
-**N:** Total number of people
+**`N:`** Total number of people
 
-**M:** Number of people whose BMI values are the farthest from the threshold.
+**`M:`** Number of people whose BMI values are the farthest from the threshold.
 
-**algorithmType:** Method to be used to solve the problem (Insertion Sort, Merge Sort or Linear Search)
+**`algorithmType:`** Method to be used to solve the problem (Insertion Sort, Merge Sort or Linear Search)
 
-**threshold:** Normal value of the BMI value.
+**`threshold:`** Normal value of the BMI value.
 
 After execution of your program, an output file should be created that lists M people with their ids, height, weight and BMI value.
 
