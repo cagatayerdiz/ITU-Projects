@@ -19,6 +19,7 @@ You will take the absolute value of the difference between the BMI value and thr
 Threshold = 22
 
 1.st person’s BMI= 30 
+
 2.nd person’s BMI= 14
 
 Both of these two people have the same distance to the threshold, because 
