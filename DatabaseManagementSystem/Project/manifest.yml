@@ -1,8 +1,0 @@
-applications:
-- name: theautomata
-  host: theautomata
-  disk: 1024M
-  path: TheAutomata.war
-  domain: mybluemix.net
-  mem: 512M
-  instances: 1
