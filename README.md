@@ -1,7 +1,7 @@
 Projects
 ========
 
-Here is some projects that I have developed.
+Here are some projects that I have developed.
 
 * [Data Structures](https://github.com/cagatayerdiz/projects/tree/master/DataStructures)
 * [Object Oriented Programming](https://github.com/cagatayerdiz/projects/tree/master/ObjectOrientedProgramming)
