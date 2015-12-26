@@ -1,5 +1,5 @@
-Projects
-========
+ITU-Projects
+============
 
 ITU undergraduate courses:
 
