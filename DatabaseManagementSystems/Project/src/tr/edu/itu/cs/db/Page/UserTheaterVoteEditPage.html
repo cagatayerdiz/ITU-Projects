@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:wicket="http://wicket.apache.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="theautomata">
+	
+	<title>User Theater Vote Edit Page</title>
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="home">
+	
+	<nav wicket:id="mainNavigation">
+      navigation links
+    </nav>
+    
+    <header id="head" class="secondary"></header>
+	
+		<div class="container">
+
+		<ol class="breadcrumb">
+			<li><wicket:link><a href="HomePage.html">Home</a></wicket:link></li>
+			<li><wicket:link><a href="AdminPage.html">Admin Panel</a></wicket:link></li>
+			<li class="active">User Theater Vote Edit</li>
+		</ol>
+		
+		<div class="row">
+
+  <h2>User Theater Vote Edit Panel</h2>
+   
+   <form style="display:inline-block;" action="#" wicket:id="add_user_theater_vote">
+    	<fieldset>
+			<legend style="color: #00752D">Add a User Theater Vote to the database</legend>
+	    	<table>
+	    		<tr>
+	    			<td>Select a User :</td>
+	    			<td><select wicket:id="user_id">
+				    </select></td>
+				</tr>
+				<tr>
+				    <td>Select an Theater :</td>
+				    <td><select wicket:id="theater_id">
+				    </select></td>
+				</tr>
+	    		<tr>
+	    			<td>Vote :</td>
+	    			<td><input wicket:id="vote" type="text"/></td>
+	    		</tr>
+	    	</table>
+	    	<input value="Vote Theater" name="add" type="submit"/>
+	    </fieldset>
+    </form>
+    <br> 
+  	<form style="display:inline-block;" action="#" wicket:id="del_user_theater_vote">
+    	<fieldset>
+			<legend style="color: #00752D">Delete User Theater Vote from the database</legend>
+			<div wicket:id="selected_user_theater_votes">
+				<table class="sortable" border="1">
+				<thead style="background-color:#B1DEBA;color:#005C11;font-weight: bold; font-size: 20px;cursor: pointer;">
+					<tr>
+						<th></th>
+						<th>ID </th>
+						<th>User Name </th>
+						<th>Theater Name</th>
+						<th>Vote</th>
+					</tr>
+				</thead>
+				<tr wicket:id="user_theater_vote_list">
+					<td><input type="checkbox" wicket:id="selected" /></td>
+					<td wicket:id="id"></td>		
+					<td wicket:id="userName"></td>			
+					<td wicket:id="title"></td>
+					<td wicket:id="vote"></td>						
+				</tr>	
+				</table>
+			</div>
+		<input type="submit" value="Delete" name="delete"/>
+		</fieldset>
+	</form>
+	 <br> 
+	 <form style="display:inline-block;" action="#" wicket:id="update_user_theater_vote">
+    	<fieldset>
+			<legend style="color: #00752D">Update a User Theater Vote to the database</legend>
+	    	<table>
+	    		<tr>
+	    		    <td>Update a User Theater Vote :</td>
+	    		</tr>
+	    		<tr>
+	    		    <td><select wicket:id="user_theater_vote_list">
+	    			</select></td>
+	    		</tr>
+	    	</table>
+	    	<table>
+	    		<tr>
+	    			<td>Select a New User :</td>
+	    			<td><select wicket:id="user_id">
+				    </select></td>
+				</tr>
+				<tr>
+				    <td>Select a New Theater :</td>
+				    <td><select wicket:id="theater_id">
+				    </select></td>
+				</tr>
+	    		<tr>
+	    			<td>New Vote :</td>
+	    			<td><input wicket:id="vote" type="text"/></td>
+	    		</tr>
+	    	</table>
+	    	<input value="Update" name="update" type="submit"/>
+	    </fieldset>
+    </form>
+     </div>
+    </div>
+ 	<footer>
+		<nav wicket:id="footerNavigation">
+	      footer links
+	    </nav>
+	</footer>
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="assets/js/headroom.min.js"></script>
+	<script src="assets/js/jQuery.headroom.min.js"></script>
+	<script src="assets/js/template.js"></script>
+	<script src="assets/js/sorttable.js"></script>  
+</body>
+</html>

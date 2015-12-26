@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:wicket="http://wicket.apache.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="theautomata">
+	
+	<title>Theater Events</title>
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="home">
+	
+	<nav wicket:id="mainNavigation">
+      navigation links
+    </nav>
+    
+    <header id="head" class="secondary"></header>
+	
+		<div class="container">
+
+		<ol class="breadcrumb">
+			<li><wicket:link><a href="HomePage.html">Home</a></wicket:link></li>
+			<li class="active">Search Theater Events</li>
+		</ol>
+		
+		<div class="row">
+  <h2>Theater Events</h2>
+    <form style="display:inline-block;" action="#" wicket:id="search_event">
+    	<fieldset>
+			<legend style="color: #00752D">Search Theater Event in the database</legend>
+	    	<table>
+	    		<tr>
+	    			<td>Theater Title:</td>
+	    			<td>City: </td>
+	    			<td>Date :</td>
+	    			
+	    		</tr>
+	    		<tr>
+	    			<td><input wicket:id="location" type="text" placeholder="Theater Title"/></td>
+	    			<td><select wicket:id="city_id">
+		    		</select></td>
+		    		<td><input wicket:id="date" type="text" placeholder="Any Date"/></td>								
+		    	</tr>
+	    	</table>
+	    	<input value="Search" name="search" wicket:id="Search" type="submit"/>
+	    	
+	    </fieldset>
+    </form>
+    <br><br>
+    <form style="display:inline-block;" action="#" wicket:id="results">    
+       <fieldset>
+			<legend style="color: #00752D">Results</legend>
+				<table class="sortable" border="1">
+				<thead style="background-color:#B1DEBA;color:#005C11;font-weight: bold; font-size: 20px;cursor: pointer;">
+					<tr>
+						<th wicket:id="t1">Select</th>
+						<th wicket:id="t2">Event Name</th>
+						<th wicket:id="t3">Theater Title</th>
+						<th wicket:id="t4">City</th>
+						<th wicket:id="t5">Scene</th>
+						<th wicket:id="t6">Date</th>
+						<th wicket:id="t7">Occupancy</th>
+						<th wicket:id="t8">#Empty Seat</th>
+						
+					</tr>
+				</thead>
+				<span wicket:id="location">
+				<tr wicket:id="event_list">	
+					<td><input wicket:id="radioo" type="radio"/></td>	
+					<td wicket:id="eventName"></td>						
+					<td wicket:id="title"></td>
+					<td wicket:id="city"></td>
+					<td wicket:id="scene"></td>
+					<td wicket:id="date"></td>
+					<td wicket:id="occupancy"></td>
+					<td wicket:id="emptySeat"></td>
+				</tr>
+				</span>
+				</table>
+				<br>
+				<span wicket:id="t9">Ticket Number:</span>
+				<input wicket:id="numTicket" type="text" size="4"/>
+				<input wicket:id="reserve" value="Make a Reservation" type="submit"/>	
+		</fieldset>
+    </form>	
+    </div>
+    </div>
+    <br>
+ 	<footer>
+		<nav wicket:id="footerNavigation">
+	      footer links
+	    </nav>
+	</footer>
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="assets/js/headroom.min.js"></script>
+	<script src="assets/js/jQuery.headroom.min.js"></script>
+	<script src="assets/js/template.js"></script> 
+	<script src="assets/js/sorttable.js"></script> 
+    
+  </body>
+</html>

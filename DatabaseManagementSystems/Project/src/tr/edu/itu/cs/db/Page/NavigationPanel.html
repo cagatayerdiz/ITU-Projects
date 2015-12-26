@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+  <head>
+    <meta charset="utf-8" />
+    <title>TheautomataDB</title>
+    <link rel="stylesheet" href="style.css" />
+	
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="home">
+  <wicket:panel>
+  <!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<a class="navbar-brand" href="#" wicket:id="home1">theautomata</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li class="active"><a href="#" wicket:id="executeStatus"></a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">SQL Executions<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+						   <li><a href="#" wicket:id="sqlExecute">Execute From Text File</a></li>
+		        		   <li><a href="#" wicket:id="databaseInitializer">Database Initializer</a></li>
+						</ul>
+					</li>
+					<li class="tagline"><a href="#" wicket:id="adminPage">Admin Panel</a></li> 
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Theautomata<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+						   <li><a href="#" wicket:id="events">Events</a></li>
+						   <li><a href="#" wicket:id="myReservations">My Reservations</a></li>
+						   <li><a href="#" wicket:id="searchTheaters">Search Theaters</a></li>
+		        		   <li><a href="#" wicket:id="searchActors">Search Actors</a></li>        		   
+						</ul>
+					</li> 
+					<li><a href="#" wicket:id="aboutPage">About</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a class="btn" href="#" wicket:id="loginOrLogout">
+					 <span wicket:id="logStatus"/></a></li>
+					<li class="active"><a href="#" wicket:id="infoUserName"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div> 
+	</wicket:panel> 
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="assets/js/headroom.min.js"></script>
+	<script src="assets/js/jQuery.headroom.min.js"></script>
+	<script src="assets/js/template.js"></script> 
+  </body>
+</html>
