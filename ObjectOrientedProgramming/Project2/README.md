@@ -1,4 +1,4 @@
-Project1 Description
+Project 2 Description
 ====================
 
 In this assignment, you’ll design and implement necessary classes for the simulation of the classical
