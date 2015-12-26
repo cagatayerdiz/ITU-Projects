@@ -1,7 +1,7 @@
 Projects
 ========
 
-ITU undergraduate courses
+ITU undergraduate courses:
 
 * [Data Structures](https://github.com/cagatayerdiz/projects/tree/master/DataStructures)
 * [Object Oriented Programming](https://github.com/cagatayerdiz/projects/tree/master/ObjectOrientedProgramming)
