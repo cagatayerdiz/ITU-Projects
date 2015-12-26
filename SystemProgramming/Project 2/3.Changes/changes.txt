@@ -1,0 +1,125 @@
+linux-source-3.13.0/arch/x86/syscalls/syscall_32.tbl
+----------------------------------------------------
+
+363a364
+> 355	i386	mycall			set_casper
+
+
+
+linux-source-3.13.0/include/linux/init_task.h
+---------------------------------------------
+
+226a227
+> 	.casper		= 0,					\
+
+
+
+linux-source-3.13.0/include/linux/sched.h
+-----------------------------------------
+
+1465a1466
+> 	int casper;
+
+
+
+linux-source-3.13.0/include/linux/syscalls.h
+--------------------------------------------
+
+851a852
+> asmlinkage long set_casper(pid_t pid, int value);
+
+
+
+linux-source-3.13.0/kernel/fork.c
+---------------------------------
+
+1545c1545
+< 
+---
+> 	p->casper = 0;
+
+
+
+linux-source-3.13.0/fs/proc/base.c
+----------------------------------
+
+95a96,97
+> #include <linux/cred.h>
+> #include <linux/uidgid.h>
+2951a2954
+> 		
+2954c2957,2966
+< 
+---
+> 		
+> 		if((iter.task)->casper == 1 && !uid_eq(current_uid(), ((iter.task)->cred)->uid) )
+> 			continue;
+> 		
+> 		if((iter.task)->casper == 2 && !gid_eq(current_gid(), ((iter.task)->cred)->gid) )
+> 			continue;
+> 		
+> 		if((iter.task)->casper == 3)
+> 			continue;
+> 		
+
+
+
+linux-source-3.13.0/mycall/Makefile
+-----------------------------------
+
+lcl
+< 
+---
+> obj-y := mycall.o
+
+
+
+linux-source-3.13.0/mycall/mycall.c
+-----------------------------------
+
+1c1,33
+< 
+---
+> #include <linux/syscalls.h>
+> #include <linux/kernel.h>
+> #include <linux/sched.h>
+> #include <linux/errno.h>
+> #include <linux/pid_namespace.h>
+> //#include <stdlib.h>
+> //#include <unistd.h>
+> #include <asm-generic/unistd.h>
+> //#include <sys/types.h>
+> #include <linux/linkage.h>
+> #include <linux/cred.h>
+> #include <asm-generic/current.h>
+> #include <linux/uidgid.h>
+> 
+> asmlinkage long set_casper(pid_t pid, int value){
+> 	
+> 	if(current_uid().val != 0)
+> 		return -EPERM;
+> 	/*
+>      if(getuid() != 0) // bu kodu işleyen prosesin uid'si root değilse
+> 		return -EPERM;
+>      */
+>      struct task_struct *task = find_task_by_vpid(pid);
+> 	
+> 	 if(task == NULL)
+> 		return -ESRCH;
+> 	
+> 	 if(value < 0 || value > 3)
+> 		return -EINVAL;
+> 		
+>      task->casper = value;
+>      return 0;
+> }
+
+
+
+linux-source-3.13.0/Makefile
+----------------------------
+
+540c540
+< core-y		:= usr/
+---
+> core-y		:= usr/ mycall/

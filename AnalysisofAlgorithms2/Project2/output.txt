@@ -1,0 +1,11 @@
+(2,0) 	
+(7,0) 	
+(7,1) 	
+(3,2) 	
+(6,2) 	
+(5,4) 	
+(7,5) 	
+
+The network total cost :	18.1
+The central city	   :	 7th
+The total cost of communication between the head office : 25.6
