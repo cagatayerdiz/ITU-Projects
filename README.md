@@ -3,6 +3,7 @@ ITU-Projects
 
 ITU undergraduate courses:
 
+* [Intr to Sci&Eng Comp (C)](https://github.com/cagatayerdiz/projects/tree/master/IntrtoSci&EngComp(C))
 * [Data Structures](https://github.com/cagatayerdiz/projects/tree/master/DataStructures)
 * [Object Oriented Programming](https://github.com/cagatayerdiz/projects/tree/master/ObjectOrientedProgramming)
 * [Analysis of Algorithms 1](https://github.com/cagatayerdiz/projects/tree/master/AnalysisofAlgorithms1)
