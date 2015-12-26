@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:wicket="http://wicket.apache.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="theautomata">
+	
+	<title>Theaters</title>
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="home">
+	
+	<nav wicket:id="mainNavigation">
+      navigation links
+    </nav>
+    
+    <header id="head" class="secondary"></header>
+	
+		<div class="container">
+
+		<ol class="breadcrumb">
+			<li><wicket:link><a href="HomePage.html">Home</a></wicket:link></li>
+			<li><wicket:link><a href="SearchActorsPage.html">Search Actors</a></wicket:link></li>
+			<li class="active">Actor Informations</li>
+		</ol>
+		
+		<div class="row">
+  <h2>Actor Informations</h2>
+    	    
+       <fieldset>
+			<legend style="color: #00752D"><span wicket:id="name"></span> <span wicket:id="surname"></span>is playing in these theaters</legend>
+				<table class="sortable" border="2">
+				<thead style="background-color:#B1DEBA;color:#005C11;font-weight: bold; font-size: 20px;cursor: pointer;">
+					<tr>
+						<th>Theater</th>
+						<th>Type</th>
+						<th>Language</th>
+						<th>Rating</th>
+					</tr>
+				</thead>
+				<tr wicket:id="theater_list">
+					<td wicket:id="title"></td>
+					<td wicket:id="type"></td>
+					<td wicket:id="language"></td>
+					<td wicket:id="rating"></td>
+				</tr>	
+				</table>
+		</fieldset>
+		<br>
+		<form style="display:inline-block;" action="#" wicket:id="add_user_actor_vote">
+	    	<fieldset>
+				<legend style="color: #00752D">Vote for <span wicket:id="name"></span> <span wicket:id="surname"></span></legend>
+		    	<table>
+		    		<tr>
+		    			<td>Vote :</td>
+		    			<td><select wicket:id="vote"></select></td>
+		    		</tr>
+		    	</table>
+		    	<input value="Vote Actor" name="add" type="submit"/>
+		    </fieldset>
+    	</form>
+    	<br><br>
+	
+    	<form style="display:inline-block;" action="#" wicket:id="add_actor_comment">
+    	<fieldset>
+			<legend style="color: #00752D">Comments for <span wicket:id="name"></span> <span wicket:id="surname"></span></legend>
+				<table class="sortable" border="2">
+				<thead style="background-color:#B1DEBA;color:#005C11;font-weight: bold; font-size: 20px;cursor: pointer;">
+					<tr>
+						<th>User Name </th>
+						<th>Comment</th>
+						<th>Date</th>
+					</tr>
+				</thead>
+				<tr wicket:id="actor_comment_list">		
+					<td wicket:id="userName"></td>			
+					<td wicket:id="comment"></td>						
+					<td wicket:id="date"></td>
+				</tr>	
+				</table>
+	    	<table>
+	    		<tr>
+	    			<td>Add a Comment :</td>
+	    			<td><input wicket:id="comment" type="text"/></td>
+	    		</tr> 
+	    	</table>
+	    	<input value="Add" name="add" type="submit"/>
+	    </fieldset>
+    </form>
+    </div>
+    </div>
+    <br>
+ 	<footer>
+		<nav wicket:id="footerNavigation">
+	      footer links
+	    </nav>
+	</footer>
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="assets/js/headroom.min.js"></script>
+	<script src="assets/js/jQuery.headroom.min.js"></script>
+	<script src="assets/js/template.js"></script> 
+    <script src="assets/js/sorttable.js"></script> 
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:wicket="http://wicket.apache.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="theautomata">
+	
+	<title>Casting Edit Page</title>
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="home">
+	
+	<nav wicket:id="mainNavigation">
+      navigation links
+    </nav>
+    
+    <header id="head" class="secondary"></header>
+	
+		<div class="container">
+
+		<ol class="breadcrumb">
+			<li><wicket:link><a href="HomePage.html">Home</a></wicket:link></li>
+			<li><wicket:link><a href="AdminPage.html">Admin Panel</a></wicket:link></li>
+			<li class="active">Casting Edit</li>
+		</ol>
+		
+		<div class="row">
+  <h2>Casting Edit Panel</h2>
+    <form style="display:inline-block;" action="#" wicket:id="add_actor_theater">
+			<fieldset>
+				<legend style="color: #00752D">Select a Theater and set its Actors</legend>
+		        <table>
+	    		<tr>
+	    			<td>Select a Theater :</td>		    	
+				</tr>
+				<tr>
+				    <td><select wicket:id="theater_list" name="theater_list">
+				    </select></td>
+				</tr>
+	    		</table>
+	    		<br>
+		        <div wicket:id="selected_actors">
+				<table class="sortable" border="1">
+				<thead style="background-color:#B1DEBA;color:#005C11;font-weight: bold; font-size: 20px;cursor: pointer;">
+					<tr>
+						<th></th>
+						<th>Actor Name</th>
+						<th>Surname</th>
+					</tr>
+				</thead>
+				<tr wicket:id="actor_list">
+					<td><input type="checkbox" wicket:id="selected" /></td>
+					<td wicket:id="name"></td>					
+					<td wicket:id="surname"></td>					
+				</tr>	
+				</table>
+				</div>	    
+	        <input value="Set the actors" name="get" type="submit"/>
+	        </fieldset>
+    </form>
+    <br><br>
+   <form style="display:inline-block;" action="#" wicket:id="del_actor_theater">
+			<fieldset>
+				<legend style="color: #00752D">Select a Theater and delete its Actors</legend>
+		        
+		        <div wicket:id="selected_actors">
+				<table class="sortable" border="1">
+				<thead style="background-color:#B1DEBA;color:#005C11;font-weight: bold; font-size: 20px;cursor: pointer;">
+					<tr>
+						<th></th>
+						<th>Theater Name</th>
+						<th>Actor Name</th>
+						<th>Surname</th>
+
+					</tr>
+				</thead>
+				<tr wicket:id="actor_list">
+					<td><input type="checkbox" wicket:id="selected" /></td>
+					<td wicket:id="title"></td>
+					<td wicket:id="name"></td>					
+					<td wicket:id="surname"></td>				
+				</tr>	
+				</table>
+				</div>	    
+	        <input value="Delete the actors" name="get" type="submit"/>
+	        </fieldset>
+    </form>
+    </div>
+    </div>
+    <br>
+ 	<footer>
+		<nav wicket:id="footerNavigation">
+	      footer links
+	    </nav>
+	</footer>
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="assets/js/headroom.min.js"></script>
+	<script src="assets/js/jQuery.headroom.min.js"></script>
+	<script src="assets/js/template.js"></script>
+	<script src="assets/js/sorttable.js"></script> 
+  </body>
+</html>

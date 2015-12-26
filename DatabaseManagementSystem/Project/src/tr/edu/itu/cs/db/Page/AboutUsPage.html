@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns:wicket="http://wicket.apache.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="theautomata">
+	
+	<title>About Page</title>
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="home">
+
+	<nav wicket:id="mainNavigation">
+      navigation links
+    </nav>
+    
+    <header id="head" class="secondary"></header>
+	
+	<!-- container -->
+	<div class="container">
+
+		<ol class="breadcrumb">
+			<li><wicket:link><a href="HomePage.html">Home</a></wicket:link></li>
+			<li class="active">About</li>
+		</ol>
+
+		<div class="row">
+			<article class="col-sm-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">About us</h1>
+				</header>
+				<h4>Theautomata is the...</h4>
+				<header class="page-header">
+					<h1 class="page-title">Our Team</h1>
+				</header>
+				<h3>Mert Cingoz</h3>
+				<img src="assets/about/1.png"><br/>
+				<h3>Nurefsan Sarikaya</h3>
+				<img src="assets/about/2.png"><br/>
+				<h3>Cagatay Erdiz</h3>
+				<img src="assets/about/3.png"><br/>
+				<h3>Ahmet Gozuberk</h3>
+				<img src="assets/about/4.png"><br/>
+				<h3>Muhammet Cakir</h3>
+				<img src="assets/about/5.png"><br/><br/>
+			</article>
+		</div>
+	</div>
+	
+	<footer>
+		<nav wicket:id="footerNavigation">
+	      footer links
+	    </nav>
+	</footer>
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="assets/js/headroom.min.js"></script>
+	<script src="assets/js/jQuery.headroom.min.js"></script>
+	<script src="assets/js/template.js"></script>  
+</body>
+</html>

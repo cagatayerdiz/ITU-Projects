@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:wicket="http://wicket.apache.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="theautomata">
+	
+	<title>Email Confirmation Page</title>
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="home">
+	<!-- Header -->
+		<nav wicket:id="mainNavigation">
+      navigation links
+    </nav>
+    
+    <header id="head" class="secondary"></header>
+	
+		<div class="container">
+
+		<ol class="breadcrumb">
+			<li><wicket:link><a href="HomePage.html">Home</a></wicket:link></li>
+			<li class="active">Email Confirmation</li>
+		</ol>
+		
+		<div class="row">
+	<div class="container">
+        <div class="row text-center pad-top ">
+            <div class="col-md-12">
+                <h2> Email Confirmation Page </h2>
+            </div>
+        </div>
+        <div class="row  pad-top">
+		
+			<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<strong>
+					The confirmation code has been sent your email</strong>  
+					</div>
+			
+					<div class="panel-body">	
+						<form id="EmailConfirmationForm" method="get" wicket:id="EmailConfirmationForm" role="form">	
+					
+						<div class="form-group input-group">
+							<span class="input-group-addon"><i class="fa fa-lock" ></i></span>
+							<input wicket:id="verificationCode" type="text" id="verificationCode" class="form-control" placeholder="Verification Code" />
+						</div>
+												
+						<input type="submit" name="Ok" wicket:id="ok" class="btn btn-action" value="Ok" />		
+						<input wicket:id="resend" name="Resend Code" type="submit" class="btn btn-action" value="Resend Code"/>
+						</form>
+							
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+    </div>
+    <br>
+ 	<footer>
+		<nav wicket:id="footerNavigation">
+	      footer links
+	    </nav>
+	</footer>
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="assets/js/headroom.min.js"></script>
+	<script src="assets/js/jQuery.headroom.min.js"></script>
+	<script src="assets/js/template.js"></script> 
+</body>
+</html>
