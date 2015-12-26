@@ -1,8 +1,3 @@
-/**
- * BLG 312 - Ödev 2
- * Çağatay Erdiz
- * 150110040
- **/
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
